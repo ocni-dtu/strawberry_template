@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = {extras = ["all"], version = "*"}
+uvicorn = {extras = ["standard"], version = "*"}
+strawberry-graphql = {extras = ["fastapi"], version = ">=0.134.0"}
+psycopg2-binary = "*"
+tenacity = "*"
+sqlalchemy = "*"
+sqlmodel = "*"
+
+[dev-packages]
+pydevd-pycharm = "==222.4459.20"
+black = ">=23.1.0"
+isort = ">=5.12.0"
+pre-commit = "*"
+docker = "*"
+mixer = "*"
+sqlalchemy-stubs = "*"
+pytest = "*"
+pytest-env = "*"
+pytest-datafixtures = "*"
+pytest-alembic = "*"
+pytest-mock = "*"
+
+[requires]
+python_version = "3.11"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
